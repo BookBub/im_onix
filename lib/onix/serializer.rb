@@ -67,12 +67,14 @@ module ONIX
 
     module Default
       def self.serialize(xml, subset, tag = nil)
+        byebug
         ONIX::Serializer::Traverser.serialize(Default, xml, subset, tag)
       end
 
       class Root
         def self.serialize(xml, subset, tag, level = 0)
-          root_options = subset.version && subset.version >= 300 ? { :xmlns => "http://ns.editeur.org/onix/3.0/reference", :release => subset.release } : {}
+          byebug
+          root_options = {} #subset.version && subset.version >= 300 ? { :xmlns => "http://ns.editeur.org/onix/3.0/reference", :release => subset.release } : {}
           xml.send(tag, root_options) {
             ONIX::Serializer::Traverser.recursive_serialize(Default, xml, subset, tag, level + 1)
           }
