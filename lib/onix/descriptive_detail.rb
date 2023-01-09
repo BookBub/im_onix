@@ -48,7 +48,7 @@ module ONIX
     # elements "Event", :subset, :cardinality => 0..n
 
 
-    element "EditionType", :subset, :cardinality => 0..n
+    elements "EditionType", :subset, :cardinality => 0..n
     element "EditionNumber", :integer, :cardinality => 0..1
     element "EditionVersionNumber", :text, :cardinality => 0..1
     elements "EditionStatement", :text, :cardinality => 0..n
