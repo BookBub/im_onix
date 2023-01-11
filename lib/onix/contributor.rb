@@ -31,7 +31,7 @@ module ONIX
     element "CorporateName", :text, :cardinality => 0..1
     element "CorporateNameInverted", :text, :cardinality => 0..1
 
-    # element "UnnamedPersons", :subset, :cardinality => 0..1
+    element "UnnamedPersons", :subset, :cardinality => 0..1
     # elements "AlternativeName", :subset, :cardinality => 0..n
 
 
