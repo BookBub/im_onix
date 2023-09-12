@@ -7,7 +7,9 @@ require 'onix/comparison_product_price'
 
 module ONIX
   class Price < SubsetDSL
-    elements "PriceIdentifier", :subset, :shortcut => :identifiers, :cardinality => 0..n
+    include IdentifiersMethods::ProprietaryId
+
+    elements "PriceIdentifier", :subset, :cardinality => 0..n
 
     element "PriceType", :subset, :shortcut => :type, :cardinality => 0..1
     element "PriceQualifier", :subset, :shortcut => :qualifier, :cardinality => 0..1
