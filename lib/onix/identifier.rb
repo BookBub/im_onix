@@ -49,10 +49,14 @@ module ONIX
     identifier_elements "CollectionIDType"
   end
 
+  class PriceIdentifier < Identifier
+    identifier_elements "PriceIDType"
+  end
+
   class ProductIdentifier < Identifier
     identifier_elements "ProductIDType"
   end
-
+  
   class ProductContactIdentifier < Identifier
     identifier_elements "ProductContactIDType"
   end
