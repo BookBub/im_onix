@@ -2,6 +2,7 @@ require 'onix/subset'
 require 'onix/website'
 require 'onix/professional_affiliation'
 require 'onix/contributor_place'
+require 'onix/alternative_name'
 
 module ONIX
   class Contributor < SubsetDSL
@@ -32,7 +33,7 @@ module ONIX
     element "CorporateNameInverted", :text, :cardinality => 0..1
 
     element "UnnamedPersons", :subset, :cardinality => 0..1
-    # elements "AlternativeName", :subset, :cardinality => 0..n
+    elements "AlternativeName", :subset, :cardinality => 0..n
 
 
     elements "ContributorDate", :subset, :shortcut => :dates, :cardinality => 0..n
